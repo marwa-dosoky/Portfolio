@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Marwa Desoky CV</title>
+  <!-- Load Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Fira+Sans:900|Merriweather&display=swap" rel="stylesheet">
+  <!-- Load Styles -->
+  <link href="css/styles.css" rel="stylesheet">
+</head>
+
+<body>
+  <!-- HTML Follows BEM naming conventions 
+  IDs are only used for sections to connect menu achors to sections -->
+  <header class="page__header">
+    <nav class="navbar__menu">
+      <!-- Navigation starts as empty UL that will be populated with JS -->
+      <ul id="navbar__list">
+
+        <li><a id="bio_link" href="#bio" class="menu__link">Bio</a></li>
+        <li><a id="techSkills_link" href="#techSkills" class="menu__link">Technical Skills</a></li>
+        <li><a id="education_link" href="#education" class="menu__link">Education</a></li>
+        <li><a id="activities_link" href="#activities" class="menu__link">Activities</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <header class="main__hero">
+      <h1>Marwa Desoky CV </h1>
+    </header>
+    <!-- Each Section has an ID (used for the anchor) and 
+    a data attribute that will populate the li node.
+    Adding more sections will automatically populate nav.
+    The first section is set to active class by default -->
+    <section id="bio" data-nav="Bio" class="your-active-class">
+      <div class="landing__container">
+        <h2>Bio</h2>
+        <p>I am a Software Developer with 5+ years of experience. Worked on business domains like telecom, finance, content management systems and lately electronic chips cataloging .I am an expert in Java, but I have also worked with PHP and C#.I have gained experience in system analysis, and UI developing throughout my professional journey.</p>
+      </div>
+    </section>
+    <section id="techSkills" data-nav="Technical Skills">
+      <div class="landing__container">
+        <h2>Technical Skills</h2>
+        <p>JAVA Technologies: JSF, PrimeFaces, Spring MVC, GWT,JSP and Servlets, Hibernate, JMS, Junit, EJB, JasperReports.<br/>
+          Web Tools and Technologies: HTML, JavaScript, CSS, Jquery.<br/>
+          Database: MS SQL, Oracle, Derby, DB2, MySQL.<br/>
+          Application and Web Servers:  WebSphere, Weblogic, Glassfish, Apache Tomcat<br/>
+          IDE: Eclipse, NetBeans, Visual Studio, Spring Tool Suite, IBM RSA.<br/>
+          PHP:  Zend Framework.<br/>
+          Version Control: Apache Subversion, Git.<br/>
+          Performance Tuning Tools: Jmeter, NewRelic, Sonar. <br/>
+          Build Automation Tools: Maven, Jenkins. </p>
+      </div>
+    </section>
+    <section id="education" data-nav="Education">
+      <div class="landing__container">
+        <h2>Education</h2>
+        <p>Degree: Bachelor degree of information systems<br/>		Year: 2009<br/>		
+          Faculty: Computers Science & Information Systems<br/>	University: Helwan<br/>
+          Grade: Very Good		</p>
+      </div>
+    </section>
+    <section id="activities" data-nav="Activities">
+      <div class="landing__container">
+        <h2>Activities</h2>
+        <p>Organizer in Egyptien Engineering Day 2007, and 2008<br/>
+          Volunteer in the job fair held by IEEE Helwan student branch<br/>
+          Representative for IEEE booth in  EASAT Egypt job fair<br/>
+          Computer instructor in Resala charity organization</p>
+      </div>
+    </section>
+  </main>
+  <footer class="page__footer">
+    <p>&copy Marwa Desoky</p>
+  </footer>
+  <script src="js/app.js"></script>
+</body>
+
+</html>
