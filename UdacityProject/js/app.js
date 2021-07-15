@@ -7,10 +7,20 @@ var navbar_items = [ [ 'bio_link', 'bio', 'Bio' ],
 function builtNavBar() {
 	var navBarHtml = "";
 	navbar_items.forEach(function(item, index, array) {
-		navBarHtml += "<li><a id=\"" + item[0] + "\" href=\"" + item[1]
+		navBarHtml += "<li><a id=\"" + item[0] + "\" href=\"#" + item[1]
 				+ "\" class=\"menu__link\">" + item[2] + "</a></li>";
 	});
 	document.getElementById('navbar__list').innerHTML = navBarHtml;
+	
+//lazy initialization for the page elements
+	 bio = document.getElementById('bio');
+	 techSkills = document.getElementById('techSkills');
+	 education = document.getElementById('education');
+	 activities = document.getElementById('activities');
+	 bio_link = document.getElementById('bio_link');
+	 techSkills_link = document.getElementById('techSkills_link');
+	 education_link = document.getElementById('education_link');
+	 activities_link = document.getElementById('activities_link');
 }
 
 // check if the section is in the viewport
@@ -23,15 +33,7 @@ function isInViewport(el) {
 
 	);
 }
-
-const bio = document.getElementById('bio');
-const techSkills = document.getElementById('techSkills');
-const education = document.getElementById('education');
-const activities = document.getElementById('activities');
-const bio_link = document.getElementById('bio_link');
-const techSkills_link = document.getElementById('techSkills_link');
-const education_link = document.getElementById('education_link');
-const activities_link = document.getElementById('activities_link');
+//
 
 function reset_highlight_class() {
 	// clear the active state class fot the navbar to only highlight the viewed
