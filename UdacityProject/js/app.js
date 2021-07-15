@@ -1,7 +1,17 @@
 //// Build the navbar
-var navbar_items = [ [ 'bio_link', 'bio' ],
-		[ 'techSkills_link', 'techSkills' ], [ 'education_link', 'education' ],
-		[ 'activities_link', 'activities' ] ];
+var navbar_items = [ [ 'bio_link', 'bio', 'Bio' ],
+		[ 'techSkills_link', 'techSkills', 'Technical Skills' ],
+		[ 'education_link', 'education', 'Education' ],
+		[ 'activities_link', 'activities', 'Activities' ] ];
+
+function builtNavBar() {
+	var navBarHtml = "";
+	navbar_items.forEach(function(item, index, array) {
+		navBarHtml += "<li><a id=\"" + item[0] + "\" href=\"" + item[1]
+				+ "\" class=\"menu__link\">" + item[2] + "</a></li>";
+	});
+	document.getElementById('navbar__list').innerHTML = navBarHtml;
+}
 
 // check if the section is in the viewport
 // https://www.javascripttutorial.net/
