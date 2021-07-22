@@ -20,3 +20,4 @@ Updated by Marwa Dosoky
 
 ## Project Discription 
 Hi, This project is done by Marwa Dosoky, as an assignment in the web development track
+The UI is designed by Udacity team, the JS is added and modified by me

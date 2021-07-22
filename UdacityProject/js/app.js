@@ -1,4 +1,3 @@
-
 //// Build the navbar
 // list of sections
 let sections;
@@ -11,11 +10,10 @@ function builtNavBar() {
 	sections = document.querySelectorAll('section');
 	let navBarHtml = "";
 	sections.forEach(function(item, index, array) {
-
-		navBarHtml += "<li><a id=\"" + item.dataset.nav + "Link"
-				+ "\"  onclick=\"gototSection(" + item.getAttribute('id')
-				+ ")\" " + " class=\"menu__link\">" + item.dataset.nav
-				+ "</a></li>";
+		navBarHtml += "<li><a id=\"" + item.dataset.nav.replace(/\s+/g, '')
+				+ "Link" + "\"  onclick=\"gototSection("
+				+ item.getAttribute('id') + ")\" " + " class=\"menu__link\">"
+				+ item.dataset.nav + "</a></li>";
 	});
 
 	document.getElementById('navbar__list').innerHTML = navBarHtml;
@@ -42,10 +40,13 @@ function reset_highlight_class() {
 	sections.forEach(function(item, index, array) {
 		// clear the active state from the section
 		item.classList.remove("your-active-class");
-
 		// clear the active state from the navigation link
-		// let navbarLink = document.getElementById(item.dataset.nav + "Link");
-		// navbarLink.remove("link_active");
+
+		let navbarLink = document.getElementById(item.dataset.nav.replace(
+				/\s+/g, '')
+				+ "Link");
+		console.log(navbarLink);
+		navbarLink.classList.remove("link_active");
 
 	});
 
@@ -60,10 +61,10 @@ document.addEventListener('scroll', function() {
 
 			item.classList.add("your-active-class");
 
-			// let navbarLink = document.getElementById(item.dataset.nav
-			// + "Link");
-			// console.log(navbarLink);
-			// navbarLink.classList.add("link_active");
+			let navbarLink = document.getElementById(item.dataset.nav.replace(
+					/\s+/g, '')
+					+ "Link");
+			navbarLink.classList.add("link_active");
 		}
 	});
 
